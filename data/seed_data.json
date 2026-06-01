@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-02-23T10:47:07.011539Z",
+  "products": [
+    {"product_id": 1001, "sku": "SKU-1001", "name": "Accessories - Haven 282", "category": "Accessories", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": [], "lab_report_required": false, "price": 35.43, "popularity_score": 0.18},
+    {"product_id": 1002, "sku": "SKU-1002", "name": "Nicotine Vape - Cloud 90", "category": "Nicotine Vape", "flags": {"nicotine": true, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": ["MA"], "lab_report_required": false, "price": 74.14, "popularity_score": 0.08},
+    {"product_id": 1003, "sku": "SKU-1003", "name": "CBD Tincture - Calm 50", "category": "CBD", "flags": {"nicotine": false, "thc": false, "cbd": true, "kratom": false, "mushroom": false}, "blocked_states": ["ID"], "lab_report_required": true, "price": 49.99, "popularity_score": 0.45},
+    {"product_id": 1004, "sku": "SKU-1004", "name": "Kratom Powder - Green 200", "category": "Kratom", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": true, "mushroom": false}, "blocked_states": ["AL", "AR", "IN", "RI", "VT", "WI"], "lab_report_required": true, "price": 29.99, "popularity_score": 0.33},
+    {"product_id": 1005, "sku": "SKU-1005", "name": "Mushroom Gummies - Focus 60", "category": "Mushroom", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": false, "mushroom": true}, "blocked_states": [], "lab_report_required": false, "price": 59.99, "popularity_score": 0.62},
+    {"product_id": 1006, "sku": "SKU-1006", "name": "Nicotine Pouches - Arctic 20", "category": "Nicotine Pouch", "flags": {"nicotine": true, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": ["CA", "MA"], "lab_report_required": false, "price": 14.99, "popularity_score": 0.71},
+    {"product_id": 1007, "sku": "SKU-1007", "name": "Accessories - Carry Case Pro", "category": "Accessories", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": [], "lab_report_required": false, "price": 24.99, "popularity_score": 0.29},
+    {"product_id": 1008, "sku": "SKU-1008", "name": "CBD Gummies - Sleep 30", "category": "CBD", "flags": {"nicotine": false, "thc": false, "cbd": true, "kratom": false, "mushroom": false}, "blocked_states": [], "lab_report_required": true, "price": 39.99, "popularity_score": 0.55},
+    {"product_id": 1009, "sku": "SKU-1009", "name": "THC Gummies - Relax 25", "category": "THC", "flags": {"nicotine": false, "thc": true, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": ["ID", "UT", "KS", "SD", "WY", "NE"], "lab_report_required": true, "price": 44.99, "popularity_score": 0.48},
+    {"product_id": 1010, "sku": "SKU-1010", "name": "Mushroom Coffee - Morning Blend", "category": "Mushroom", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": false, "mushroom": true}, "blocked_states": [], "lab_report_required": false, "price": 34.99, "popularity_score": 0.67},
+    {"product_id": 1034, "sku": "SKU-1034", "name": "THC Beverage - Cloud 460", "category": "THC Beverage", "flags": {"nicotine": false, "thc": true, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": ["ID", "UT"], "lab_report_required": false, "price": 23.70, "popularity_score": 0.221},
+    {"product_id": 1050, "sku": "SKU-1050", "name": "Nicotine Vape - Storm 150", "category": "Nicotine Vape", "flags": {"nicotine": true, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": ["CA", "MA", "NY"], "lab_report_required": false, "price": 89.99, "popularity_score": 0.41},
+    {"product_id": 1051, "sku": "SKU-1051", "name": "CBD Oil - Recovery 100ml", "category": "CBD", "flags": {"nicotine": false, "thc": false, "cbd": true, "kratom": false, "mushroom": false}, "blocked_states": [], "lab_report_required": true, "price": 79.99, "popularity_score": 0.52},
+    {"product_id": 1052, "sku": "SKU-1052", "name": "Accessories - Vape Pen Kit", "category": "Accessories", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": false, "mushroom": false}, "blocked_states": [], "lab_report_required": false, "price": 49.99, "popularity_score": 0.38},
+    {"product_id": 1053, "sku": "SKU-1053", "name": "Kratom Capsules - Red Bali 100", "category": "Kratom", "flags": {"nicotine": false, "thc": false, "cbd": false, "kratom": true, "mushroom": false}, "blocked_states": ["AL", "AR", "IN", "RI", "VT", "WI"], "lab_report_required": true, "price": 39.99, "popularity_score": 0.27}
+  ],
+  "inventory": [
+    {"product_id": 1001, "warehouse": "CA-LA", "qty": 120},
+    {"product_id": 1001, "warehouse": "TX-DAL", "qty": 85},
+    {"product_id": 1002, "warehouse": "TX-DAL", "qty": 200},
+    {"product_id": 1002, "warehouse": "FL-MIA", "qty": 150},
+    {"product_id": 1003, "warehouse": "CA-LA", "qty": 75},
+    {"product_id": 1003, "warehouse": "NY-NYC", "qty": 60},
+    {"product_id": 1004, "warehouse": "TX-DAL", "qty": 300},
+    {"product_id": 1005, "warehouse": "CA-LA", "qty": 180},
+    {"product_id": 1005, "warehouse": "NY-NYC", "qty": 90},
+    {"product_id": 1005, "warehouse": "TX-DAL", "qty": 110},
+    {"product_id": 1006, "warehouse": "TX-DAL", "qty": 500},
+    {"product_id": 1006, "warehouse": "FL-MIA", "qty": 350},
+    {"product_id": 1007, "warehouse": "CA-LA", "qty": 200},
+    {"product_id": 1007, "warehouse": "NY-NYC", "qty": 175},
+    {"product_id": 1008, "warehouse": "CA-LA", "qty": 95},
+    {"product_id": 1008, "warehouse": "TX-DAL", "qty": 130},
+    {"product_id": 1009, "warehouse": "CA-LA", "qty": 60},
+    {"product_id": 1009, "warehouse": "NY-NYC", "qty": 45},
+    {"product_id": 1010, "warehouse": "CA-LA", "qty": 220},
+    {"product_id": 1010, "warehouse": "TX-DAL", "qty": 190},
+    {"product_id": 1010, "warehouse": "FL-MIA", "qty": 80},
+    {"product_id": 1034, "warehouse": "CA-LA", "qty": 50},
+    {"product_id": 1034, "warehouse": "TX-DAL", "qty": 70},
+    {"product_id": 1050, "warehouse": "TX-DAL", "qty": 100},
+    {"product_id": 1051, "warehouse": "CA-LA", "qty": 40},
+    {"product_id": 1051, "warehouse": "NY-NYC", "qty": 55},
+    {"product_id": 1052, "warehouse": "CA-LA", "qty": 300},
+    {"product_id": 1052, "warehouse": "TX-DAL", "qty": 250},
+    {"product_id": 1053, "warehouse": "TX-DAL", "qty": 180}
+  ],
+  "customers": [
+    {"customer_id": "C001", "name": "Sunrise Distributors", "state": "CA", "tier": "gold"},
+    {"customer_id": "C002", "name": "Gulf Coast Retail", "state": "TX", "tier": "silver"},
+    {"customer_id": "C003", "name": "Northeast Wholesale", "state": "MA", "tier": "bronze"},
+    {"customer_id": "C004", "name": "Sunshine Shops", "state": "FL", "tier": "gold"},
+    {"customer_id": "C005", "name": "Mountain West Supply", "state": "UT", "tier": "silver"}
+  ],
+  "vendors": [
+    {"vendor_id": "V001", "name": "PureLeaf Labs", "status": "approved"},
+    {"vendor_id": "V002", "name": "CloudVape Co", "status": "pending"},
+    {"vendor_id": "V003", "name": "NaturalBliss", "status": "approved"},
+    {"vendor_id": "V004", "name": "KratomKing", "status": "review"}
+  ],
+  "kb_docs": [
+    {"doc_id": "SOP-RETURNS", "title": "Returns SOP", "visibility": "internal", "text": "Returns are accepted within 14 days for unopened items. Restocking fee of 15% may apply. Customer must submit return request via portal. Vendor-direct returns require GM approval."},
+    {"doc_id": "POLICY-SHIPPING", "title": "Shipping Policy", "visibility": "public", "text": "We ship via LTL freight for most distributor orders. Delivery estimates vary by warehouse and destination. Standard lead time is 3-5 business days. Expedited shipping available at extra cost."},
+    {"doc_id": "SOP-VENDOR-UPLOAD", "title": "Vendor Catalog Upload Guide", "visibility": "vendor", "text": "Upload via Excel template. Required fields include Net Wt (oz), Net Vol (ml), nicotine content, images, and state restrictions if applicable. Lab reports required for THC, CBD, and Kratom products. Missing fields will result in REVIEW status."},
+    {"doc_id": "POLICY-COMPLIANCE", "title": "State Compliance Policy", "visibility": "internal", "text": "All products with THC, nicotine, kratom, or CBD flags must be validated against the blocked_states list before fulfillment. Compliance decisions are deterministic and cannot be overridden by sales staff. Violations result in immediate order hold."},
+    {"doc_id": "SOP-ONBOARDING", "title": "Vendor Onboarding Checklist", "visibility": "vendor", "text": "Step 1: Submit vendor application with business license. Step 2: Upload product catalog via Excel template. Step 3: Attach lab reports for regulated products. Step 4: Complete state restriction declarations. Step 5: Await compliance review (3-5 business days)."},
+    {"doc_id": "POLICY-PRICING", "title": "Pricing & Tiers Policy", "visibility": "internal", "text": "Gold tier customers receive 10% discount on all orders over $500. Silver tier customers receive 5% discount. Bronze tier customers pay standard MSRP. Volume discounts apply for orders over 100 units of a single SKU."}
+  ]
+}
