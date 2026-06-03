@@ -106,7 +106,7 @@ def main():
     print(banner("=" * 72))
     print(banner("  REELO AI — LIVE DEMO (5 Canonical Queries)"))
     print(banner(f"  Session: {session_id[:8]}..."))
-    print(banner(f"  Redis:   {'✅ connected' if redis_ok else '⚠️  unavailable (running without cache)'}"))
+    print(banner(f"  Redis:   {'[OK] connected' if redis_ok else '[WARN] unavailable (running without cache)'}"))
     print(banner("=" * 72))
 
     queries = [
@@ -145,7 +145,8 @@ def main():
     for q in queries:
         print()
         print(f"{C.BOLD}{C.BLUE}{'─' * 72}{C.RESET}")
-        print(f"  {label(f'[Q{q[\"num\"]}]')} {q['label']}")
+        lbl = label(f"[Q{q['num']}]")
+        print(f"  {lbl} {q['label']}")
         print(f"  {C.DIM}user_type={q['user_type']}{C.RESET}")
         print(f"  {C.DIM}query: \"{q['query']}\"{C.RESET}")
         print(f"{C.BOLD}{C.BLUE}{'─' * 72}{C.RESET}")
