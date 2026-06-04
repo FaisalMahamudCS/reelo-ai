@@ -102,6 +102,17 @@ graph TD
   - *Mitigation*: We use a distributed lock algorithm (Redlock) in Redis to serialize state changes on a per-session basis.
 - **Circuit Breaker Pattern**: If Redis or the Groq API goes down, the orchestrator degrades gracefully using local memory cache and returns pre-configured structural JSON payloads rather than failing completely.
 
+#### Transitioning to Kubernetes (EKS) & Redis Queues (Celery/RQ)
+If traffic scaling requirements exceed AWS Fargate limits or require specialized orchestration, the architecture can be evolved into a fully distributed Kubernetes cluster:
+- **Kubernetes (EKS) Deployment**:
+  - **Stateless App Pods**: The FastAPI orchestrator runs as a replica set controlled by a **Horizontal Pod Autoscaler (HPA)**, dynamically scaling based on real-time metrics (e.g. CPU or custom HTTP request rates via Prometheus metrics adapter).
+  - **Ingress Controller**: An NGINX or AWS Load Balancer controller manages external ingress, SSL termination, and rate limiting directly at the gateway.
+- **Asynchronous Task Queuing (Celery / BullMQ on Redis)**:
+  - **Decoupling Latency**: Long-running tool chains (e.g. PDF report validation, syncing large inventory files, heavy database analytical writes) are decoupled from the HTTP request-response thread. FastAPI pushes these tasks to a Redis queue and returns an immediate status tracking ID to the user.
+  - **Worker Pods**: Distinct worker container replica sets run in separate K8s pods, pulling tasks from the Redis queue.
+  - **Rate Limiting & Retries**: Workers conform to external LLM API rate limits. If a worker gets a 429 Too Many Requests response from Groq, Celery puts the task back on the queue with exponential backoff, preventing HTTP requests from timing out.
+  - **Horizontal Queue Scaling (KEDA)**: Kubernetes Event-driven Autoscaling (KEDA) monitors the queue length in Redis and automatically scales the number of active worker pods up or down depending on task volume.
+
 ### File Structure
 
 ```
