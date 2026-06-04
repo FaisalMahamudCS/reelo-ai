@@ -62,31 +62,19 @@ graph TD
     Route53 --> WAF[AWS WAF]
     WAF --> ALB[Application Load Balancer]
     
-    subgraph VPC [VPC - Multi-AZ]
-        subgraph PublicSubnets [Public Subnets]
-            ALB
-        end
+    subgraph VPC [AWS VPC - Multi-AZ]
+        ALB -->|Route Traffic| Task1[FastAPI App Instance 1]
+        ALB -->|Route Traffic| Task2[FastAPI App Instance 2]
         
-        subgraph PrivateSubnets [Private Subnets - ECS Fargate Cluster]
-            direction LR
-            Task1[FastAPI App Instance 1]
-            Task2[FastAPI App Instance 2]
-            TaskN[FastAPI App Instance N]
-        end
-        
-        subgraph DataSubnets [Isolated Subnets - Redis & DB]
-            Redis[(ElastiCache Redis Multi-AZ)]
-        end
+        Task1 -->|Cache & Session| Redis[(ElastiCache Redis Multi-AZ)]
+        Task2 -->|Cache & Session| Redis
     end
     
-    ALB -->|Target Group| Task1
-    ALB -->|Target Group| Task2
-    ALB -->|Target Group| TaskN
+    Task1 -->|Pull Image| ECR[Amazon ECR]
+    Task2 -->|Pull Image| ECR
     
-    Task1 & Task2 & TaskN -->|Read/Write Session & Tool Cache| Redis
-    Task1 & Task2 & TaskN -->|Pull Container Image| ECR[Amazon ECR]
-    
-    Task1 & Task2 & TaskN -->|External API Calls| GroqAPI[Groq / LLM Cloud]
+    Task1 -->|External LLM Call| GroqAPI[Groq / LLM Cloud]
+    Task2 -->|External LLM Call| GroqAPI[Groq / LLM Cloud]
 ```
 
 ### 3. Scaling & Distributed System Patterns
